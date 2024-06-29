@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 300 900;
   font-display: swap;
-  src: url(/fonts/Figtree.woff2) format("woff2");
+  src: url(/assets/fonts/Figtree.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
@@ -22,6 +22,9 @@ body {
   background-color: var(--color-primary-yellow);
   font: 500 1rem/1.6 var(--font-primary);
   color: var(--color-neutral-black);
+}
+
+.wrapper {
   min-height: 100vh;
   padding: 0 1.5rem;
 
@@ -30,11 +33,14 @@ body {
   align-items: center;
 }
 
+.container {
+  width: min(100%, 24rem);
+}
+
 .card {
   background-color: var(--color-neutral-white);
   border-radius: 1.25rem;
   border: 1px solid var(--color-neutral-black);
-  max-width: 24rem;
   padding: 1.5rem;
   position: relative;
 }
@@ -56,7 +62,7 @@ body {
   left: 1rem;
   right: -1rem;
   bottom: -1rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.33,0,0.3,1);
 }
 
 .card__header .illustration {
@@ -78,7 +84,7 @@ body {
   text-decoration: none;
   padding: .25rem .75rem;
   width: fit-content;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.33,0,0.3,1);
 }
 
 .card__body .category:hover {
@@ -103,7 +109,7 @@ body {
   display: inline-block;
   font-size: 1.5rem;
   font-weight: 800;
-  transition: color 0.3s ease;
+  transition: color 0.3s cubic-bezier(0.33,0,0.3,1);
 }
 
 .card__body .title:hover {
