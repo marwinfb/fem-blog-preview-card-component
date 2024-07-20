@@ -5,25 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Blog preview card</title>
-  <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <main class="wrapper">
     <div class="container">
       <article class="card">
-        <figure class="card__header">
-          <img src="/assets/images/illustration-article.svg" alt="Abstract illustrations" class="illustration">
+        <figure class="card__figure">
+          <img src="/assets/images/illustration-article.svg" alt="Abstract illustrations" class="card__image">
         </figure>
         <div class="card__body">
-          <a href="#" class="category">Learning</a>
-          <span class="published-date">Published 21 Dec 2023</span>
-          <h1 class="title">HTML & CSS foundations</h1>
-          <p class="description">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+          <a href="#" class="card__category">Learning</a>
+          <span class="card__date">Published 21 Dec 2023</span>
+          <h1 class="card__headline">HTML & CSS foundations</h1>
+          <p class="card__description">These languages are the backbone of every website, defining structure, content, and presentation.</p>
         </div>
         <div class="card__footer">
-          <img src="/assets/images/image-avatar.webp" alt="Greg Hooper avatar" width="32" height="32" class="avatar">
-          <p class="author-name">Greg Hooper</p>
+          <img src="/assets/images/image-avatar.webp" alt="Greg Hooper avatar" width="32" height="32" class="card__avatar">
+          <p class="card__author">Greg Hooper</p>
         </div>
       </article>
     </div>

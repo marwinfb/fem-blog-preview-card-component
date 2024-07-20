@@ -1,12 +1,19 @@
+@import url("https://unpkg.com/modern-css-reset/dist/reset.min.css");
+
 @font-face {
+  font-display: swap;
   font-family: "Figtree";
   font-style: normal;
-  font-weight: 300 900;
+  font-weight: 500;
+  src: url("../fonts/figtree-v5-latin-500.woff2") format("woff2");
+}
+
+@font-face {
   font-display: swap;
-  src: url(/assets/fonts/Figtree.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/figtree-v5-latin-800.woff2") format("woff2");
 }
 
 :root {
@@ -50,8 +57,8 @@ body {
   position: absolute;
   background-color: var(--color-neutral-black);
   border-radius: 1.25rem;
-  top: .5rem;
-  left: .5rem;
+  top: 0.5rem;
+  left: 0.5rem;
   right: -0.5rem;
   bottom: -0.5rem;
   z-index: -1;
@@ -62,10 +69,10 @@ body {
   left: 1rem;
   right: -1rem;
   bottom: -1rem;
-  transition: all 0.3s cubic-bezier(0.33,0,0.3,1);
+  transition: all 0.3s cubic-bezier(0.33, 0, 0.3, 1);
 }
 
-.card__header .illustration {
+.card__image {
   border-radius: 0.625rem;
   height: auto;
 }
@@ -74,20 +81,20 @@ body {
   margin-top: 1.5rem;
 }
 
-.card__body .category {
-  border-radius: .25rem;
+.card__category {
+  border-radius: 0.25rem;
   background-color: var(--color-primary-yellow);
   color: inherit;
   display: block;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 800;
   text-decoration: none;
-  padding: .25rem .75rem;
+  padding: 0.25rem 0.75rem;
   width: fit-content;
-  transition: all 0.3s cubic-bezier(0.33,0,0.3,1);
+  transition: all 0.3s cubic-bezier(0.33, 0, 0.3, 1);
 }
 
-.card__body .category:hover {
+.card__category:hover {
   background-color: var(--color-neutral-black);
   color: var(--color-primary-yellow);
 }
@@ -97,57 +104,55 @@ body {
 }
 
 .card__body > * + * {
-  margin-top: .75rem;
+  margin-top: 0.75rem;
 }
 
-.card__body .published-date {
-  font-size: .875rem;
+.card__date {
+  font-size: 0.875rem;
   display: block;
 }
 
-.card__body .title {
+.card__headline {
   display: inline-block;
   font-size: 1.5rem;
   font-weight: 800;
-  transition: color 0.3s cubic-bezier(0.33,0,0.3,1);
+  transition: color 0.3s cubic-bezier(0.33, 0, 0.3, 1);
 }
 
-.card__body .title:hover {
+.card__headline:hover {
   color: var(--color-primary-yellow);
   cursor: pointer;
 }
 
-.card__body .description {
+.card__description {
   color: var(--color-neutral-grey);
 }
 
 .card__footer {
   display: flex;
   align-items: center;
-  gap: .75rem;
+  gap: 0.75rem;
 }
 
-.card__footer .avatar {
+.card__avatar {
   height: 2rem;
 }
 
-.card__footer .author-name {
+.card__author {
   font-weight: 800;
   display: block;
 }
 
 @media (max-width: 28rem) {
-  .card__body .category,
-  .card__body .published-date {
+  :is(.card__category, .card__date) {
     font-size: 0.75rem;
   }
 
-  .card__body .title {
+  .card__headline {
     font-size: 1.25rem;
   }
 
-  .card__body .description,
-  .card__footer .author-name {
-    font-size: .875rem;
+  :is(.card__description, .card__footer .author-name) {
+    font-size: 0.875rem;
   }
 }
